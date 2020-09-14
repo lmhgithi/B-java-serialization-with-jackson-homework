@@ -2,7 +2,7 @@ package com.thoughtworks.capability.gtb.vo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.thoughtworks.capability.gtb.serializer.IntegerSerializer;
+import com.thoughtworks.capability.gtb.serializer.NullsIntegerSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PersonVo {
   private String id;
-  @JsonSerialize(nullsUsing = IntegerSerializer.class)
+  @JsonSerialize(nullsUsing = NullsIntegerSerializer.class)
   private Integer age;
   private String name;
   @JsonInclude(JsonInclude.Include.NON_NULL)
