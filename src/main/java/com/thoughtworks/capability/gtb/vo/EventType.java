@@ -12,7 +12,7 @@ public enum EventType {
   }
 
   @JsonValue
-  public String getOrdinal() {
+  public String getCode() {
     return code;
   }
 }
